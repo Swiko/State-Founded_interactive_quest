@@ -1,0 +1,14 @@
+﻿state-building-simulation/
+├── .github/
+│   └── workflows/
+│       └── run_simulation.yml    # Инструкции для автоматического запуска в GitHub
+├── simulation/
+│   ├── __init__.py
+│   ├── engine.py                 # Математическая логика и формулы симуляции
+│   └── scenarios.json            # Предустановленные сценарии (Сингапур, кризис и т.д.)
+├── outputs/
+│   ├── .gitkeep                  # Папка, куда GitHub Actions будет сохранять графики и отчеты
+├── .gitignore                    # Исключение кэша Python
+├── README.md                     # Главное академическое описание проекта (на английском)
+├── requirements.txt              # Список библиотек (matplotlib, pandas и т.д.)
+└── run.py                        # Главный скрипт для локального запуска симуляции

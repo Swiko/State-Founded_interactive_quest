@@ -1,0 +1,19 @@
+﻿{
+  "historical_profiles": {
+    "singapore_model": {
+      "name": "The Balanced Leap (Singapore Style)",
+      "description": "Simultaneous investments in human capital and world-class maritime infrastructure.",
+      "choices": [2, 1]
+    },
+    "industrial_overdrive": {
+      "name": "The Heavy Industry Trap",
+      "description": "Massive focus on factories while ignoring healthcare and basic infrastructure.",
+      "choices": [1, 2]
+    }
+  },
+  "strings": {
+    "welcome": "============================================================\nSTATE-FUNDED CAPITAL INVESTMENTS & SOCIO-ECONOMIC OUTCOMES\nResearch Simulation Model v2.0 (Automated & Interactive Mode)\n============================================================",
+    "year1_prompt": "\n[YEAR 1] Current System Metrics: {stats}\nSelect Primary Greenfield Capital Allocation ($40M Budget):\n1. Heavy Industrialization (State Factories & Grid Infrastructure)\n2. Human-Centric Foundation (Comprehensive Schools & Medical Complexes)\n",
+    "year2_prompt": "\n[YEAR 2] Current System Metrics: {stats} | Leftover Treasury: ${budget}M\nStructural bottleneck assessment in progress...\nSelect Secondary Expansion Allocation ($30M Budget):\n1. Logistics & Supply Chains (Highways and Freight Cargo Hubs)\n2. Civil Utilities & Grid Stability (Energy Networks)\n"
+  }
+}

@@ -1,0 +1,35 @@
+﻿name: Infrastructure Simulation Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch: # Позволяет запускать симуляцию вручную кнопкой на GitHub
+
+jobs:
+  simulate-and-report:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository code
+      uses: actions/checkout@v4
+
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v5
+      with:
+        python-node: '3.10'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Run Economic Simulation
+      run: |
+        # Запускаем скрипт, который вместо интерактивного ввода берет сценарии из scenarios.json
+        python run.py --mode automated 
+
+    - name: Upload Generated Dashboard & Reports
+      uses: actions/upload-artifact@v4
+      with:
+        name: socio-economic-report
+        path: outputs/ # GitHub сохранит сгенерированные графики (.png) и отчеты (.md) в архив
